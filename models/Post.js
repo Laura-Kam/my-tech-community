@@ -14,13 +14,13 @@ Post.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    post: {
+    title: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    description: {
-      type: DataTypes.STRING,
-    },
+    // description: {
+    //   type: DataTypes.STRING,
+    // },
     date_created: {
       type: DataTypes.DATE,
       allowNull: false,
