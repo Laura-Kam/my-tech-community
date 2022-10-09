@@ -6,7 +6,7 @@ const { Post, User } = require("../models");
 router.get("/", async (req, res) => {
   try {
     const posts = await Post.findAll({
-      attributes: ["id", "title", "date-created", "user_id", "post_paragraph"],
+      attributes: ["id", "title", "date_created", "user_id", "post_paragraph"],
       include: [
         {
           model: User,
@@ -18,8 +18,10 @@ router.get("/", async (req, res) => {
     const postsSerialized = posts.map((post) => post.get({ plain: true }));
     const obj = { posts: postsSerialized, logged_in: req.session.logged_in };
 
+    console.log(obj);
     res.render("homepage", obj);
   } catch (err) {
+    console.log(err);
     res.status(500).json(err);
   }
 });
