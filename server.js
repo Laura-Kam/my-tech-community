@@ -1,9 +1,11 @@
+//requiring dependencies
 const express = require("express");
 const path = require("path");
 const exphbs = require("express-handlebars");
 const helpers = require("./utils/helpers");
 const routes = require("./controllers");
 const session = require("express-session");
+require("dotenv").config();
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -11,8 +13,9 @@ const PORT = process.env.PORT || 3001;
 const sequelize = require("./config/connection");
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
 
+//object sess created, secret is similar to a password to encrypt token.
 const sess = {
-  secret: "Super secret secret",
+  secret: process.env.SECRET,
   cookie: {},
   resave: false,
   saveUninitialized: true,
@@ -21,6 +24,7 @@ const sess = {
   }),
 };
 
+//setting up the session
 app.use(session(sess));
 
 const hbs = exphbs.create({ helpers });

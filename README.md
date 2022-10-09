@@ -76,7 +76,7 @@ npm i.
 
 ## Instructions for users of the app
 
-Clone the application, install dependencies: Express, express-handlebars, MySQL2, Dotenv, Sequelize, connect-session-sequelize and bcrypt.package. Run the schema and then seeds.sql files. Seeding can be done through 'npm run seed' Then run the app using node server.js using 'npm start'.
+Clone the application, install dependencies: Express, express-handlebars, express-session, MySQL2, Dotenv, Sequelize, connect-session-sequelize and bcrypt.package. Run the schema and then seeds.sql files. Seeding can be done through 'npm run seed' Then run the app using node server.js using 'npm start'.
 
 ## Features of the project
 

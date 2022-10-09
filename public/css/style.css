@@ -19,6 +19,16 @@
         height: 35px;
         font-size: 15px;
         }
+        #dashboard-subtitle {
+            height: 200px;
+            background: #d7f3f6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            height: 30px;
+            font-size: 12px;
+            }
 
 
 
@@ -79,4 +89,12 @@
 
     .card {
         margin: 40px;
+        border-width: 4px;
+        width: 600px;
     }
+
+    
+
+.sign-up {
+    margin-left: 30px;
+}

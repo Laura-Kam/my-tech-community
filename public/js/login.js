@@ -7,15 +7,17 @@ const loginFormHandler = async (event) => {
 
   if (username && password) {
     // Send a POST request to the API endpoint
-    const response = await fetch("/api/users/login", {
+
+    //is this the correct end point?
+    const response = await fetch("/login", {
       method: "POST",
       body: JSON.stringify({ username, password }),
       headers: { "Content-Type": "application/json" },
     });
 
     if (response.ok) {
-      // If successful, redirect the browser to the profile page
-      document.location.replace("/profile");
+      // If successful, redirect the browser to the dashboard page.
+      document.location.replace("/dashboard");
     } else {
       alert(response.statusText);
     }
