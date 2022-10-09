@@ -33,4 +33,22 @@ router.get("/login", (req, res) => {
   res.render("login");
 });
 
+//updating user_id when trying to render posts on homepage handlebar.
+
+router.put("/:id", async (req, res) => {
+  try {
+    updateUserIdInPost = await Post.update(req.user_id, {
+      where: {
+        id: req.params.id,
+      },
+    });
+    if (!updateUserIdInPost[0]) {
+      res.status(404).json({ message: "No user with this id " });
+      return;
+    }
+    res.status(200).json(updateUserIdInPost);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 module.exports = router;

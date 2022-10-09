@@ -1,9 +1,9 @@
 
 {{#each posts as |post|}}
     <div class="card" style="width: 18rem">
-      <div class="card-header">{{post.username}}</div>
+      <div class="card-header">{{post.title}} {{post.username}}</div>
       <ul class="list-group list-group-flush">
-        <li class="list-group-item">User comment1</li>
+        <li class="list-group-item">{{post.post_paragraph}}</li>
       </ul>
     </div>
     {{/each}}
