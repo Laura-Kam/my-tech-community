@@ -14,7 +14,7 @@
 - [Screenshot of Application](#Screenshot-of-Application)
 - [Bugs](#bugs)
 - [Version History](#Version-history)
-- [Link to deployed Heroku App](#Link-to-deployed-Heroky-App)
+- [Link to deployed Heroku App](#Link-to-deployed-Heroku-App)
 - [How to contribute](#how-to-contribute)
 - [Questions](#questions)
 
@@ -95,6 +95,8 @@ The project aims to allow users to view the homepage of previous comments. When 
 - The handlebars were not connected to the database.
 - Connection failed to work. Resolved.
 - The post modal was not referencing to the user_id, as the relationship was not established.
+- Sign-up not complete.
+- Not able to post comments.
 
 ## Version history
 

@@ -19,6 +19,3 @@ const signUpToBlog = async (event) => {
     alert("Failed to sign up");
   }
 };
-const signUpBtn = document
-  .getElementById("signUpBtn")
-  .addEventListener("click", signUpToBlog);
