@@ -107,7 +107,7 @@ The project aims to allow users to view the homepage of previous comments. When 
 
 # Link to deployed Heroku App
 
-- [Deployed Heroku App My Tech Community ](https://fast-fjord-23844.herokuapp.com/)
+- [Deployed Heroku App My Tech Community ](https://arcane-garden-85695.herokuapp.com/)
 
 ## How to contribute
 
