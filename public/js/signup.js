@@ -13,9 +13,14 @@ const signUpToBlog = async (event) => {
     headers: { "Content-Type": "application/json" },
   });
   if (response.ok) {
+    console.log("It worked! Eureka!");
     document.location.replace("/dashboard");
   } else {
     console.log(response);
     alert("Failed to sign up");
   }
 };
+
+const signUpBtn = document.querySelector("#signUpSubmitButton");
+
+signUpBtn.addEventListener("click", signUpToBlog);

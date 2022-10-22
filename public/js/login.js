@@ -11,13 +11,14 @@ const loginFormHandler = async (event) => {
     // Send a POST request to the API endpoint
 
     //is this the correct end point?
-    const response = await fetch("/login", {
+    const response = await fetch("/api/users/login", {
       method: "POST",
       body: JSON.stringify({ username, password }),
       headers: { "Content-Type": "application/json" },
     });
 
     if (response.ok) {
+      console.log("Success!! AGAIN!!");
       // If successful, redirect the browser to the dashboard page.
       document.location.replace("/dashboard");
     } else {
@@ -25,3 +26,7 @@ const loginFormHandler = async (event) => {
     }
   }
 };
+
+const logInBtn = document.querySelector("#logInButton");
+
+logInBtn.addEventListener("click", loginFormHandler);

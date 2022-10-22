@@ -38,6 +38,11 @@ router.get("/signup", (req, res) => {
   res.render("signup");
 });
 
+//create new post in homepage.
+router.get("/newpost", (req, res) => {
+  res.render("post");
+});
+
 //signup
 router.post("/signup", async (req, res) => {
   try {

@@ -1,7 +1,10 @@
 const router = require("express").Router();
 
+//requiring modals.
+
 const { Post, User } = require("../../models");
 
+//creating a log in after sign up.
 router.post("/login", async (req, res) => {
   try {
     const userData = await User.findOne({
@@ -17,7 +20,7 @@ router.post("/login", async (req, res) => {
       return;
     }
 
-    const validatePassword = await userData.checkpassword(req.body.password);
+    const validatePassword = await userData.checkPassword(req.body.password);
 
     if (!validatePassword) {
       res
