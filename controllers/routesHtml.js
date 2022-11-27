@@ -73,7 +73,7 @@ router.get("/dashboard", async (req, res) => {
 
     const postsSerialized = posts.map((post) => post.get({ plain: true }));
     const obj = { posts: postsSerialized, logged_in: req.session.logged_in };
-
+    console.log(req.session);
     console.log(obj);
     res.render("dashboard", obj);
   } catch (err) {

@@ -11,12 +11,22 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 const sequelize = require("./config/connection");
+//a SQL session store using Sequelize. js
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
 
 //object sess created, secret is similar to a password to encrypt token.
 const sess = {
   secret: process.env.SECRET,
-  cookie: {},
+  //cookie contains info, is client-side that stores information from the session= e.g items in shopping cart.
+  cookie: {
+    //83 hours
+    maxAge: 300000,
+    httpOnly: true,
+    //Cookie will only be sent when the request is made with HTTPS
+    secure: false,
+    sameSite: "strict",
+  },
+  //session is not resaved unless modified.
   resave: false,
   saveUninitialized: true,
   store: new SequelizeStore({
