@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
-  "engine": {
-    "node": "^16.16.0"
+  "engines": {
+    "node": "^16.x"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/Laura-Kam/my-tech-community#readme",
   "dependencies": {
-    "bcrypt": "^5.1.0",
+    "bcrypt": "^4.0.1",
     "connect-session-sequelize": "^7.1.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.1",
