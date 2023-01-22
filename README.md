@@ -88,7 +88,7 @@ The project aims to allow users to view the homepage of previous comments. When 
 
 ## Screenshot of application:
 
-[Screenshot of website](https://github.com/Laura-Kam/my-tech-community/issues/1#issue-1402258567)
+![Screenshot of website](https://user-images.githubusercontent.com/104718053/194756610-39b2c3bf-81ce-4bc7-9bc7-120d28270691.png)
 
 ## Bugs
 
@@ -116,4 +116,4 @@ Git clone the repo, work on the code, then make a pull request.
 ## Questions
 
 If you have any questions, or would like to get in touch find me on GitHub [Laura-Kam](https://github.com/Laura-Kam)
-or email me at laura_ek@yahoo.co.uk.
+or email me at laurakam91@gmail.com.
